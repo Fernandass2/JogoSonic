@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Sonic</title>
+    <link rel="shortcut icon" href="img/sonic-icon-17.jpg" type="image/x-icon">
+
+    <!-- Javascript -->
+    <script defer src="js/script.js"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="game-board">
+            <!-- Contador de passos e record -->
+            <div class="info steps-counter">
+                <p>Recorde: <span class="record">0</span></p>
+                <p>Passos: <span class="steps ">0</span></p>
+            </div>
+
+            <!-- Game Over -->
+            <div class="modal-inicio show">
+                <div class="message-inicio">
+                    <h2>Para iniciar o jogo</h2>
+                    <h2>Pressione a tecla de <span>espaço</span> ou <span>clique</span> na tela.</h2>
+                </div>
+            </div>
+
+            <!-- Game Over -->
+            <div class="modal">
+                <div class="message">
+                    <h2>Game over!</h2>
+                    <h2>Pontuação: <span class="steps"></span></h2>
+                    <button class="restart-btn">Jogar novamente</button>
+                </div>
+            </div>
+
+            <!-- obstáculos e personagem  -->
+            <img class="arvores" src="img/arvore.png" alt="arvore-decoração">
+            <img class="nuvens" src="img/nuvens.png" alt="nuvens-decoração">
+            <img class="sonic" src="img/sonic.gif" alt="sonic-protagonista">
+            <img class="vilao" src="img/vilão.gif" alt="Vilao-obistaculo">
+
+        </div>
+
+        <img class="grama" src="img/grama.png" alt="gramado">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: rgb(68, 68, 61);
+}
+
+.container {
+    width: 800px;
+    margin: 45px auto;
+}
+
+@media (max-width: 767px) {
+    .container {
+        margin: 5px auto;
+        width: 96%;
+        
+    }
+    .vilao.small {
+        width: 60px;
+        animation: vilao-animacao 1.3s infinite linear;
+
+    }
+    .sonic.small {
+        width: 80px;
+    }
+
+}
+
+
+
+.steps-counter {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #000000;
+    font-size: 18px;
+    padding: 20px;
+    background-color: #ffffff4b;
+    border-radius: 30px;
+}
+.steps-counter p {
+    margin: 10px 0;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px 15px 0 0;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e6f6ff);
+
+}
+
+.grama {
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+
+@keyframes grama-animacao {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.nuvens {
+    position: absolute;
+    margin-top: 20px;
+    width: 300px;
+    animation: nuvens-animacao 20s infinite linear;
+}
+
+.vilao {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: vilao-animacao 1.5s infinite linear;
+
+}
+
+.arvores {
+    position: absolute;
+    bottom: 0;
+    width: 600px;
+    animation: arvore-animacao 5s infinite linear;
+}
+
+.sonic {
+    width: 100px;
+    position: absolute;
+    bottom: -5px;
+    left: 25px;
+
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+    width: 100px;
+}
+
+
+@keyframes vilao-animacao {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes arvore-animacao {
+    from {
+        right: -600px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+
+    40% {
+        bottom: 100px;
+    }
+
+    50% {
+        bottom: 100px;
+    }
+
+    60% {
+        bottom: 100px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes nuvens-animacao {
+    from {
+        right: -470px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.nuvens,
+.arvores,
+.sonic,
+.vilao {
+    animation-play-state: paused;
+}
+
+/* Estilo do modal game over */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.modal h2{
+    margin-top: 15px;
+}
+
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    background-color: #ffffffcc;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.restart-btn {
+    background-color: #213fc3c5;
+    color: #fff;
+    border: none;
+    margin-top: 50px;
+    padding: 20px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.restart-btn:hover{
+    background-color: #002fffe7;
+}
+
+/* Estilo do modal inicio */
+.modal-inicio{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.modal-inicio.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-inicio h2{
+    margin-top: 20px;
+}
+
+.message-inicio {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+.message-inicio h2 span {
+    color: #002fffe7;
+}
